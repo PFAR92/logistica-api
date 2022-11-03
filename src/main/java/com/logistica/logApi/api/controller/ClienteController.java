@@ -1,4 +1,4 @@
-package com.logistica.logApi.controller;
+package com.logistica.logapi.api.controller;
 
 import java.util.List;
 
@@ -16,8 +16,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.logistica.logApi.model.Cliente;
-import com.logistica.logApi.repository.ClienteRepository;
+import com.logistica.logapi.domain.model.Cliente;
+import com.logistica.logapi.domain.repository.ClienteRepository;
+import com.logistica.logapi.domain.service.CatalogoClienteService;
+
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
@@ -26,6 +28,8 @@ import lombok.AllArgsConstructor;
 public class ClienteController {
     
     private ClienteRepository clienteRepository;
+
+    private CatalogoClienteService catalogoClienteService;
 
     @GetMapping
     public List<Cliente> listar(){
@@ -46,7 +50,7 @@ public class ClienteController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Cliente adicionar(@Valid @RequestBody Cliente cliente){
-        return clienteRepository.save(cliente);
+        return catalogoClienteService.salvar(cliente);
     }
 
     @PutMapping("/{clienteId}")
@@ -56,16 +60,14 @@ public class ClienteController {
         }
             
         cliente.setId(clienteId);
-        cliente = clienteRepository.save(cliente);
+        cliente = catalogoClienteService.salvar(cliente);
         return ResponseEntity.ok(cliente);
     }
 
     @DeleteMapping("/{clienteId}")
     public ResponseEntity<Void> remover(@PathVariable Long clienteId){
-        if(!clienteRepository.existsById(clienteId)){
-            return ResponseEntity.notFound().build();
-        }
-        clienteRepository.deleteById(clienteId);
+        catalogoClienteService.excluir(clienteId);
         return ResponseEntity.noContent().build();
+        
     } 
 }

@@ -1,4 +1,4 @@
-package com.logistica.logApi;
+package com.logistica.logapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.logistica.logApi.model;
+package com.logistica.logapi.domain.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
