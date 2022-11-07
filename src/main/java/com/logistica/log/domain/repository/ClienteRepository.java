@@ -1,4 +1,4 @@
-package com.logistica.logapi.domain.repository;
+package com.logistica.log.domain.repository;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.logistica.logapi.domain.model.Cliente;
+import com.logistica.log.domain.model.Cliente;
 
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long>{

@@ -1,4 +1,4 @@
-package com.logistica.logapi.api.exceptionhandler;
+package com.logistica.log.api.exceptionhandler;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.logistica.logapi.domain.exeption.NegocioException;
+import com.logistica.log.domain.exeption.NegocioException;
 
 
 @ControllerAdvice

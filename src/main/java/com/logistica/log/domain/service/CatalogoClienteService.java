@@ -1,13 +1,13 @@
-package com.logistica.logapi.domain.service;
+package com.logistica.log.domain.service;
 
 import javax.transaction.Transactional;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.logistica.logapi.domain.exeption.NegocioException;
-import com.logistica.logapi.domain.model.Cliente;
-import com.logistica.logapi.domain.repository.ClienteRepository;
+import com.logistica.log.domain.exeption.NegocioException;
+import com.logistica.log.domain.model.Cliente;
+import com.logistica.log.domain.repository.ClienteRepository;
 
 import lombok.AllArgsConstructor;
 

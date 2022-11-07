@@ -1,4 +1,4 @@
-package com.logistica.logapi.domain.exeption;
+package com.logistica.log.domain.exeption;
 
 public class NegocioException extends RuntimeException{
     

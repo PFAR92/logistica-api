@@ -1,4 +1,4 @@
-package com.logistica.logapi.api.controller;
+package com.logistica.log.api.controller;
 
 import java.util.List;
 
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.logistica.logapi.domain.model.Cliente;
-import com.logistica.logapi.domain.repository.ClienteRepository;
-import com.logistica.logapi.domain.service.CatalogoClienteService;
+import com.logistica.log.domain.model.Cliente;
+import com.logistica.log.domain.repository.ClienteRepository;
+import com.logistica.log.domain.service.CatalogoClienteService;
 
 import lombok.AllArgsConstructor;
 

@@ -1,4 +1,4 @@
-package com.logistica.logapi.domain.model;
+package com.logistica.log.domain.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

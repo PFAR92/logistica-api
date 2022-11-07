@@ -1,4 +1,4 @@
-package com.logistica.logapi.api.exceptionhandler;
+package com.logistica.log.api.exceptionhandler;
 
 import java.time.LocalDateTime;
 import java.util.List;
